@@ -1,4 +1,4 @@
-function [H_normalized, mu, G, obj] = optimal_neighborhood_local_kernel_clustering(K,class_num,lambda,tau,rho,Y,Ai_sum, Mi_sum, M)
+function [H_normalized, mu, G, obj] = optimal_neighborhood_local_kernel_clustering(K,class_num,lambda,tau,rho)
 
 sample_num = size(K,1);
 kernel_num = size(K,3);
@@ -7,15 +7,6 @@ K_mu = combine_K_mu(K,mu);
 G = K_mu;
 % Calculate Neighborhood of each sample
 [NS,NS_num] = genarate_neighborhood(K_mu,tau);%% tau*num
-
-% % set rho
-% rho1 = 0;
-% for m = 1:sample_num
-%     rho1 = rho1 + NS_num(m);
-% end
-% fprintf('\nrho: %f\n',rho1);
-% rho1 = rho1/(sample_num);
-% fprintf('\nrho: %f\n',rho1);
 
 Ai_sum = zeros(sample_num);
 for i = 1:sample_num
@@ -63,7 +54,4 @@ while flag
 end
 H_normalized = H./ repmat(sqrt(sum(H.^2, 2)), 1,class_num);
 
-% save_name = sprintf('obj_rho_%.2f_lambda_%d_tau_%d', rho, lambda, tau);
-% path = './mid/';
-% save([path,save_name,'_mid.mat'],'mu','obj');
 end
