@@ -6,7 +6,9 @@ MATLAB implementation of paper entitled "Optimal Neighborhood Multiple Kernel Cl
 Please cite:
 
 ```
-Jiyuan Liu, Xinwang Liu, Jian Xiong, Qing Liao, Sihang Zhou, Siwei Wang and Yuexiang Yang, “Optimal Neighborhood Multiple Kernel Clustering with Adaptive Local Kernels,” IEEE Transactions on Knowledge and Data Engineering (TKDE), 2020, doi: 10.1109/TKDE.2020.3014104.
+Jiyuan Liu, Xinwang Liu, Jian Xiong, Qing Liao, Sihang Zhou, Siwei Wang and Yuexiang Yang, 
+“Optimal Neighborhood Multiple Kernel Clustering with Adaptive Local Kernels,” 
+IEEE Transactions on Knowledge and Data Engineering (TKDE), 2020, doi: 10.1109/TKDE.2020.3014104.
 ```
 or
 ```
